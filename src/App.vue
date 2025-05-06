@@ -61,4 +61,15 @@ export default {
 }
 </script>
 
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
+
+
+.task-item.done .task-text {
+  text-decoration: line-through;
+  color: #777;
+}
+
+
+</style>
