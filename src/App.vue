@@ -22,7 +22,7 @@
           class="task-item"
           :class="{ done: task.done }"
         >
-          
+          <input type="checkbox" v-model="task.done" />
           <span class="task-text">{{ task.text }}</span>
           <button @click="removeTask(index)" class="delete-btn">🗑</button>
         </li>
