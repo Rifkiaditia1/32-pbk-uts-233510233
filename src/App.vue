@@ -19,11 +19,12 @@
         <li
           v-for="(task, index) in filteredTasks"
           :key="index"
-         
+          class="task-item"
+          :class="{ done: task.done }"
         >
           
           <span class="task-text">{{ task.text }}</span>
-          
+          <button @click="removeTask(index)" class="delete-btn">🗑</button>
         </li>
       </ul>
     </div>
@@ -52,7 +53,9 @@ export default {
         this.tasks.push({ text: this.newTask.trim(), done: false });
         this.newTask = '';
       }
-    
+    },
+    removeTask(index) {
+      this.tasks.splice(index, 1);
     }
   }
 }
