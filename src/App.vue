@@ -19,7 +19,7 @@
         <li
           v-for="(task, index) in filteredTasks"
           :key="index"
-          
+         
         >
           
           <span class="task-text">{{ task.text }}</span>
@@ -57,4 +57,5 @@ export default {
   }
 }
 </script>
+
 
