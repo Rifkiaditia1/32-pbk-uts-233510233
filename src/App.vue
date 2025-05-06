@@ -13,7 +13,12 @@
         <button @click="addTask" class="btn">Tambah</button>
       </div>
 
-      
+      <div class="filter">
+        <label>
+          <input type="checkbox" v-model="showOnlyIncomplete" />
+          Tampilkan hanya yang belum selesai
+        </label>
+      </div>
 
       <ul class="task-list">
         <li
@@ -37,7 +42,7 @@ export default {
     return {
       newTask: '',
       tasks: [],
-      
+      showOnlyIncomplete: false
     }
   },
   computed: {
